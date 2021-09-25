@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { io } from 'socket.io-client';
-const socket = io('http://localhost:8080/');
+const socket = io('https://chat-app-backend-io.herokuapp.com/');
 
 function App() {
   const [msg, setmsg] = useState()
