@@ -1,0 +1,29 @@
+.message-section{
+    height: 60vh;
+}
+
+.joined-message{
+    color:green;
+    font-size: smaller;
+    margin-bottom: 0px;
+}
+
+.message-sender{
+    background-color: #578ffe;
+    color: white;
+    padding: 5px 15px 5px 15px;
+    border-radius: 40px;
+    width: auto;
+    /* max-width: 100px; */
+    /* float: right; */
+}
+
+.message-receiver{
+    background-color: #f1f5fe;
+    color: black;
+    padding: 5px 15px 5px 15px;
+    border-radius: 40px;
+    width: auto;
+    /* max-width: 100px; */
+    /* float: left; */
+}

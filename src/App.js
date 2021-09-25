@@ -1,44 +1,20 @@
-import React, { useState } from 'react';
-import { io } from 'socket.io-client';
-const socket = io('https://chat-app-backend-io.herokuapp.com/');
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Chat from "./components/Chat";
+import Home from "./components/Home";
+import './App.css'
 
 function App() {
-  const [msg, setmsg] = useState()
-  const [allMsg, setAllMsg] = useState([])
-
-  socket.on('connect', () => {
-    console.log("Connected user ID: ", socket.id);
-  })
-
-  socket.on('disconnect', () => {
-    console.log("User disconnected");
-  })
-
-  socket.on('chat message', (msg) => {
-    const temp = [...allMsg]
-    temp.push(msg)
-    setAllMsg(temp)
-  })
-
-  const send = (e) => {
-    e.preventDefault()
-    socket.emit('chat message', msg);
-  }
 
   return (
-    <div>
-      <ul>
-        {allMsg.map((msg)=>{
-          return (
-            <li>{msg}</li>
-          )
-        })}
-      </ul>
-      <form>
-        <input type="text" onChange={e => setmsg(e.target.value)} />
-        <button type="submit" onClick={e => send(e)}>Send</button>
-      </form>
-    </div>
+    <React.Fragment>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/chat" exact component={Chat} />
+        </Switch>
+      </Router>
+    </React.Fragment>
   )
 }
 
