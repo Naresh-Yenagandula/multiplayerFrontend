@@ -46,7 +46,7 @@ function Chat() {
                             <div>
                                 {messages.map((msg) => {
                                     return (
-                                        <div>
+                                        <div className="clearfix">
                                             <p className={msg.receiver?'message-receiver':'message-sender'}>{msg.msg}</p>
                                         </div>
                                     )
