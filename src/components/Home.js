@@ -21,7 +21,7 @@ function Home(props) {
     return (
         <div className="container">
             <div className="d-flex justify-content-center align-items-center vh-100">
-                <div className="card">
+                <div className="card px-3 pb-2">
                     <div className="text-center pt-3">
                         <h4>JOIN CHAT</h4>
                     </div>
@@ -36,7 +36,7 @@ function Home(props) {
                         </div>
                     </div>
                     <div className="text-center p-2">
-                        <button className="btn btn-success w-100" onClick={() => send()}>JOIN</button>
+                        <button className="btn btn-primary w-100" onClick={() => send()}>JOIN</button>
                     </div>
                 </div>
             </div>

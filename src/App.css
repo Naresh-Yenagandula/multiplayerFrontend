@@ -1,29 +1,42 @@
-.message-section{
-    height: 60vh;
+.message-section {
+  height: 60vh;
+  overflow-y: scroll;
+}
+.message-section::-webkit-scrollbar{
+    display: none;
+}
+body {
+  background-color: #578ffe !important;
+}
+.joined-message {
+  color: white;
+  font-size: smaller;
+  margin-bottom: 0px;
 }
 
-.joined-message{
-    color:green;
-    font-size: smaller;
-    margin-bottom: 0px;
+.message-sender {
+  background-color: #578ffe;
+  color: white;
+  padding: 5px 15px 5px 15px;
+  border-radius: 40px;
+  width: auto;
+  float: right;
+  max-width: 200px;
 }
 
-.message-sender{
-    background-color: #578ffe;
-    color: white;
-    padding: 5px 15px 5px 15px;
-    border-radius: 40px;
-    width: auto;
-    /* max-width: 100px; */
-    float: right;
+.message-receiver {
+  background-color: #f1f5fe;
+  color: black;
+  padding: 5px 15px 5px 15px;
+  border-radius: 40px;
+  width: auto;
+  float: left;
 }
-
-.message-receiver{
-    background-color: #f1f5fe;
-    color: black;
-    padding: 5px 15px 5px 15px;
-    border-radius: 40px;
-    width: auto;
-    /* max-width: 100px; */
-    float: left;
+.card {
+  background: rgba(255, 255, 255, 0.17) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+  color: white !important;
 }
